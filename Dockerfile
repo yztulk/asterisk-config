@@ -11,4 +11,4 @@ RUN mkdir libpri
 RUN mkdir config
 
 # retrieve config files from git
-RUN cd /home/config && git clone https://github.com/yztulk/asterisk-config.git
+RUN cd /config && git clone https://github.com/yztulk/asterisk-config.git
