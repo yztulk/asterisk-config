@@ -1,3 +1,5 @@
+# docker build -f /home/config/Dockerfile .
+
 FROM ubuntu:16.04
 
 # make folders
