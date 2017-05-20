@@ -6,7 +6,6 @@ RUN mkdir asterisk && cd asterisk
 RUN mkdir dependencies
 RUN mkdir dahdi
 RUN mkdir libpri
-RUN mkdir asterisk
 RUN mkdir config
 
 # retrieve config files from git
