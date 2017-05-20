@@ -1,0 +1,58 @@
+//Get ubuntu ready
+sudo su
+sudo apt-get update && apt-get upgrade -y
+
+//Make folders
+cd ..
+mkdir asterisk && cd asterisk
+mkdir dependencies
+mkdir dahdi
+mkdir libpri
+mkdir asterisk
+
+//install install_prereq
+cd contrib/scripts
+chmod 777 install_prereq
+./install_prereq install
+./install_prereq install-unpackaged
+
+//Install DAHDI
+cd dahdi
+wget https://downloads.asterisk.org/pub/telephony/dahdi-linux-complete/dahdi-linux-complete-current.tar.gz
+tar -zxvf dahdi-linux-complete-current.tar.gz
+cd dahdi-linux-complete-2.11.1+2.11.1
+make
+make install
+make config
+
+//Install libpri
+cd libpri
+wget https://downloads.asterisk.org/pub/telephony/libpri/libpri-current.tar.gz
+tar -zxvf libpri-current.tar.gz
+cd libpri-1.6.0
+make
+make install
+
+//Install Asterisk
+cd asterisk
+wget https://downloads.asterisk.org/pub/telephony/asterisk/asterisk-14-current.tar.gz
+tar -zxvf asterisk-14-current.tar.gz
+cd cd asterisk-14.4.0
+./configure --with-pjproject-bundled
+make
+make install
+make samples
+make config
+
+//Install Docker
+sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt-get update
+sudo apt-get install docker-ce
+sudo su
+
+//Start asterisk
+service asterisk start
+asterisk -rvvvvv
