@@ -1,0 +1,2 @@
+cd /etc/openvpn/easy-rsa
+./build-key certificateName
