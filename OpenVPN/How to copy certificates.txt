@@ -1,0 +1,14 @@
+/**
+* Copy files with WinSCP (https://winscp.net/eng/download.php)
+*/
+
+//New Session
+//File Protocol is SFTP
+//Host name is "ec2-??-??-???-??.eu-central-1.compute.amazonaws.com"
+//Port number is 22
+//User name is ubuntu
+//Click on advanced and go to Authentication under SSH
+//Add the private key (.pem) file. WinSCP will convert it to a .ppk file. (use usb to copy private key to local computer)
+//Give ubuntu user read access to keys folder
+sudo chown ubuntu:ubuntu /etc/openvpn/easy-rsa/keys -R
+//Click login
