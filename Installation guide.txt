@@ -1,3 +1,7 @@
+/**
+* This installation guide is specific to Ubuntu 16.04.2 LTS
+*/
+
 //Get ubuntu ready
 sudo su
 sudo apt-get update && apt-get upgrade -y
