@@ -78,12 +78,3 @@ sudo chown ubuntu:ubuntu /etc/openvpn/easy-rsa/keys -R
 //Troubleshooting
 ip addr show // find tun0 and then inet to find the local ip address (10.8.0.1)
 ping -c3 10.8.0.1 //ping 3 times to this ip address
-
-//Revoke certificates
-cd /etc/openvpn/easy-rsa
-. ./vars
-./revoke-full CertificateName
-mv /etc/openvpn/easy-rsa/keys/crl.pem /etc/openvpn/
-/etc/init.d/openvpn stop
-/etc/init.d/openvpn start
-
