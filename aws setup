@@ -1,8 +1,6 @@
 Security groups
-Port 5060, Protocol udp, Source [external-ip-address]/32
-Port 10001 - 20000, Protocol udp, Source ource [external-ip-address]/32
-
-Find external ip address
-http://www.whatsmyip.org/
+For each client that want to connect to the asterisk server these two items have to be added to the security group:
+- Port 5060, Protocol udp, Source [external-ip-address]/32
+- Port 10001 - 20000, Protocol udp, Source ource [external-ip-address]/32
 
 Connect with Asterisk through a softphone by usering the IPv4 Public IP (e.g. 52.87.148.169)
