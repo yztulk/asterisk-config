@@ -54,7 +54,6 @@ service openvpn start
 
 //Key and Certificate builder (preferablly one certificate per device)
 ./build-key client1 //client1 is the name of the certificate
-cp /usr/share/doc/openvpn/examples/sample-config-files/client.conf /etc/openvpn/easy-rsa/keys/client.ovpn
 
 openvpn --genkey --secret /etc/openvpn/ta.key
 
