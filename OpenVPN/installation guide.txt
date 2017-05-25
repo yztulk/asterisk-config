@@ -1,0 +1,89 @@
+//Security group settings AWS server
+Port 22, SSH
+Port 443, Custom TCP Rule
+Port 943, Custom TCP Rule
+Port 1194, Custom UDP Rule
+leave source as 0.0.0.0/0 unless you want to restrict appliance access to certain IP addresses:
+
+//Connect to instance
+cd pathtopemfile && chmod 600 pem-file-name.pem && ssh -x -C -v -i pem-file-name.pem ubuntu@ipofserver
+
+apt-get update
+apt-get install openvpn easy-rsa
+gunzip -c /usr/share/doc/openvpn/examples/sample-config-files/server.conf.gz > /etc/openvpn/server.conf
+
+//Copy server.conf settings from Github
+
+echo 1 > /proc/sys/net/ipv4/ip_forward
+nano /etc/sysctl.conf //Uncomment net.ipv4.ip_forward
+
+//Set up Uncomplicated Firewall (ufw)
+ufw allow ssh
+ufw allow 1194/udp
+
+nano /etc/default/ufw //Look for DEFAULT_FORWARD_POLICY="DROP". This must be changed from DROP to ACCEPT. 
+
+nano /etc/ufw/before.rules
+//Add below text just before the comment "# Don't delete these required lines, ..."
+//# START OPENVPN RULES
+//# NAT table rules
+//*nat
+//:POSTROUTING ACCEPT [0:0] 
+//# Allow traffic from OpenVPN client to eth0
+//-A POSTROUTING -s 10.8.0.0/8 -o eth0 -j MASQUERADE
+//COMMIT
+//# END OPENVPN RULES
+
+ufw enable
+
+//Configure and Build the Certificate Authority
+cp -r /usr/share/easy-rsa/ /etc/openvpn
+mkdir /etc/openvpn/easy-rsa/keys
+nano /etc/openvpn/easy-rsa/vars //Update these fields KEY_COUNTRY, KEY_PROVINCE, KEY_CITY etc.
+nano /etc/openvpn/easy-rsa/vars //Update KEY_NAME to "server" --> export KEY_NAME="server"
+openssl dhparam -out /etc/openvpn/dh2048.pem 2048
+cd /etc/openvpn/easy-rsa
+. ./vars
+./clean-all
+./build-ca
+./build-key-server server //hit enter for all questions, including empty password
+cp /etc/openvpn/easy-rsa/keys/{server.crt,server.key,ca.crt} /etc/openvpn
+service openvpn start
+
+//Another way to start openvpn is through: openvpn /etc/openvpn/server.conf
+
+//Key and Certificate builder (preferablly one certificate per device)
+./build-key client1 //client1 is the name of the certificate
+cp /usr/share/doc/openvpn/examples/sample-config-files/client.conf /etc/openvpn/easy-rsa/keys/client.ovpn
+
+openvpn --genkey --secret /etc/openvpn/ta.key
+
+//Copy certificates to client
+//Use WinSCP
+//New Session
+//File Protocol is SFTP
+//Host name is "ec2-??-??-???-??.eu-central-1.compute.amazonaws.com"
+//Port number is 22
+//User name is ubuntu
+//Click on advanced and go to Authentication under SSH
+//Add the private key (.pem) file. WinSCP will convert it to a .ppk file. (use usb to copy private key to local computer)
+//Give ubuntu user read access to keys folder
+sudo chown ubuntu:ubuntu /etc/openvpn/easy-rsa/keys -R
+//Click login
+
+//To build new certificates to this
+. ./vars
+./build-key client1
+
+//Troubleshooting
+ip addr show // find tun0 and then inet to find the local ip address (10.8.0.1)
+ping -c3 10.8.0.1 //ping 3 times to this ip address
+
+//Revoke certificates
+cd /etc/openvpn/easy-rsa
+. ./vars
+./revoke-full CertificateName
+mv /etc/openvpn/easy-rsa/keys/crl.pem /etc/openvpn/
+/etc/init.d/openvpn stop
+/etc/init.d/openvpn start
+
