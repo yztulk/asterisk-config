@@ -41,7 +41,7 @@ make install
 cd asterisk
 wget https://downloads.asterisk.org/pub/telephony/asterisk/asterisk-14-current.tar.gz
 tar -zxvf asterisk-14-current.tar.gz
-cd cd asterisk-14.4.0
+cd asterisk-14.4.0
 ./configure --with-pjproject-bundled
 make
 make install
