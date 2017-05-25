@@ -5,9 +5,6 @@ Port 943, Custom TCP Rule
 Port 1194, Custom UDP Rule
 leave source as 0.0.0.0/0 unless you want to restrict appliance access to certain IP addresses:
 
-//Connect to instance
-cd pathtopemfile && chmod 600 pem-file-name.pem && ssh -x -C -v -i pem-file-name.pem ubuntu@ipofserver
-
 apt-get update
 apt-get install openvpn easy-rsa
 gunzip -c /usr/share/doc/openvpn/examples/sample-config-files/server.conf.gz > /etc/openvpn/server.conf
