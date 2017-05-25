@@ -70,10 +70,6 @@ openvpn --genkey --secret /etc/openvpn/ta.key
 sudo chown ubuntu:ubuntu /etc/openvpn/easy-rsa/keys -R
 //Click login
 
-//To build new certificates to this
-. ./vars
-./build-key client1
-
 //Troubleshooting
 ip addr show // find tun0 and then inet to find the local ip address (10.8.0.1)
 ping -c3 10.8.0.1 //ping 3 times to this ip address
