@@ -1,2 +1,12 @@
+/**
+* Ubuntu
+*/
 sudo apt-get install openvpn
 sudo openvpn --config /path/to/config.ovpn
+
+/**
+* Windows
+*/
+install OpenVPN
+go to C:\Program Files\OpenVPN\config
+copy client.ovpn
