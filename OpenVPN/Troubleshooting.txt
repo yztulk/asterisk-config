@@ -1,0 +1,2 @@
+ip addr show // find tun0 and then inet to find the local ip address (10.8.0.1)
+ping -c3 10.8.0.1 //ping 3 times to this ip address
