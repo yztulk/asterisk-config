@@ -2,7 +2,10 @@
 * Ubuntu
 */
 sudo apt-get install openvpn
-sudo openvpn --config /path/to/config.ovpn
+sudo openvpn --config /path/to/config.ovpn //Make sure to run as sudo
+
+//Disconnect from client
+sudo killall openvpn
 
 /**
 * Windows
