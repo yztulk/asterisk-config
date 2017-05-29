@@ -1,7 +1,7 @@
 # asterisk-config
-Configuration files and manuals on how to install Asterisk and OpenVPN
+This repository contains configuration files and manuals on how to install Asterisk and OpenVPN.
 
-TODO:
+Things left to do:
 - Test audio now full VPN configuration is implementated
 - Get access to Asterisk by means of the public IP address even though the Asterisk server is registred as a VPN client.
 - Install Asterisk on a Raspberry Pi 3
