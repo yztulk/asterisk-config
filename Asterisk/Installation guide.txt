@@ -57,3 +57,13 @@ apt-get install sendmail
 
 //Install htop
 sudo apt-get install htop
+
+//Install nethogs
+apt-get install build-essential libncurses5-dev libpcap-dev
+git clone https://github.com/raboof/nethogs
+cd nethogs
+make
+sudo ./src/nethogs
+sudo make install
+hash -r
+sudo nethogs
