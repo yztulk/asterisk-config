@@ -51,3 +51,6 @@ make config
 //Start asterisk
 service asterisk start
 asterisk -rvvvvv
+
+//Install mail server
+apt-get install sendmail
