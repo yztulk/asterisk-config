@@ -1,6 +1,11 @@
 Security groups
+
+//Without VPN
 For each client that want to connect to the asterisk server these two items have to be added to the security group:
 - Port 5060, Protocol udp, Source [external-ip-address]/32
 - Port 10001 - 20000, Protocol udp, Source ource [external-ip-address]/32
 
 Connect with Asterisk through a softphone by usering the IPv4 Public IP (e.g. 52.87.148.169)
+
+//With VPN
+Only expose udp port 5060 and upd port range 10001 to 20000 for the VPN server ip address including /32. So if VPN ip address is 43.56.18.22 then add 43.56.18.22/32 to the security group.
