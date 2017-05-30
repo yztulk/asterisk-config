@@ -2,7 +2,7 @@
 This repository contains configuration files and manuals on how to install Asterisk and OpenVPN.
 
 Things left to do and sorted on priority basis:
-- Test audio quality with full VPN configuration
+- Install VPN op Asterisk server
 - Send voicemail emails
 - Install Asterisk on a Raspberry Pi 3
 - Install VNC so dad and I can share screens 
