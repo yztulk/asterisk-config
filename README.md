@@ -5,7 +5,7 @@ Things left to do and sorted on priority basis:
 - Test audio quality with full VPN configuration
 - Send voicemail emails
 - Install Asterisk on a Raspberry Pi 3
-- Install screen sharing software so dad and I can share screens
+- Install VNC so dad and I can share screens 
 - Connect local (Raspberry) with external Asterisk server (through IAX)
 - Internal calls should be routed through local Raspberry
 - Install Asterisk on server in Frankfurt
