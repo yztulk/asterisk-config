@@ -8,3 +8,6 @@ https://www.raspberrypi.org/documentation/installation/installing-images/README.
 
 # Flasing image on microSD card
 https://www.raspberrypi.org/documentation/installation/installing-images/windows.md
+
+//Connect RPI3 to the LAN and find local IP address (ping ubuntu in cmd)
+ssh 192.168.1.12
