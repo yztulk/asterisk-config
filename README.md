@@ -1,7 +1,7 @@
 # Asterisk Configuration Manuals
 This repository contains configuration files and manuals on how to install Asterisk and OpenVPN.
 
-Things left to do and sorted on priority basis:
+# Things left to do and sorted on priority basis
 - Send voicemail emails (pa testen)
 - Buy Raspberry Pi 3, microSD, power supply and a case
 - Buy microSD card reader
