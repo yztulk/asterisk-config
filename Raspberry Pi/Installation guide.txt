@@ -1,1 +1,10 @@
+# Downloads
+Ubuntu Server: https://www.ubuntu.com/server
+Flavour maker: https://ubuntu-pi-flavour-maker.org/download/
+Official images: https://www.raspberrypi.org/downloads/
 
+# Installing images
+https://www.raspberrypi.org/documentation/installation/installing-images/README.md
+
+# Flasing image on microSD card
+https://www.raspberrypi.org/documentation/installation/installing-images/windows.md
