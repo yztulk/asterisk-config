@@ -14,6 +14,6 @@ Things left to do and sorted on priority basis:
 
 
 # Security (todo)
-- A VPN client you can ping internal IP addresses.
-- Install Asterisk as a user, not as root
+- A VPN client you can ping internal IP addresses. Make this password protected.
+- Run Asterisk as a user, not as root
 - SSH not on port 22
