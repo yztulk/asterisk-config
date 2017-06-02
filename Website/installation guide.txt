@@ -1,0 +1,62 @@
+//Install Docker
+sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt-get update
+sudo apt-get install docker-ce
+sudo su
+
+//Install docker compose
+apt install docker-compose
+
+//Create a compose file
+cd /home
+mkdir rofem-website && cd rofem-website
+touch docker-compose.yml && nano docker-compose.yml
+
+==============BEGIN COMPOSE FILE==============
+version: '2'
+
+services:
+   db:
+     image: mysql:5.7
+     volumes:
+       - db_data:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: somewordpress
+       MYSQL_DATABASE: wordpress
+       MYSQL_USER: wordpress
+       MYSQL_PASSWORD: wordpress
+
+   wordpress:
+     depends_on:
+       - db
+     image: wordpress:latest
+     ports:
+       - "8000:80"
+     restart: always
+     environment:
+       WORDPRESS_DB_HOST: db:3306
+       WORDPRESS_DB_USER: wordpress
+       WORDPRESS_DB_PASSWORD: wordpress
+volumes:
+    db_data:
+==============END COMPOSE FILE==============
+
+//Run this command from /home/rofem-website to create an image
+docker-compose up -d
+
+//Website is now available at port 8000
+http://ec2-35-156-172-81.eu-central-1.compute.amazonaws.com:8000/
+
+//Login credentials
+Database Name: wordpress-database
+Username: guyanan
+Password: 3;y7/LvHzmYF\dv'
+Database Host: localhost
+Table Prefix: wp_
+
+//Attach to running container
+docker exec -it "Id of running container" bash
