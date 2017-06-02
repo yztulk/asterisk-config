@@ -53,3 +53,7 @@ http://ip-address:8000/
 
 //Attach to running container
 docker exec -it "Id of running container" bash
+
+//Install nano inside container
+apt-get update
+apt-get install nano
