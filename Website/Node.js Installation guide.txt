@@ -1,2 +1,2 @@
 docker build -t rofem-website .
-docker run -p 8080:8085 [imageId]
+docker run -p 8080:8080 [imageId]
