@@ -10,5 +10,5 @@ RUN git clone https://github.com/yztulk/asterisk-config.git
 # Install app dependencies
 RUN cd /asterisk-config/Website/content ; npm install
 
-EXPOSE  8080
+EXPOSE  8085
 CMD ["node", "/asterisk-config/Website/content/index.js"]
