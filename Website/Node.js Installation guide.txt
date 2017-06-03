@@ -1,2 +1,2 @@
-docker build -t --no-cache rofem-website .
+docker build --no-cache -t rofem-website .
 docker run -p 8085:8080 3f0eb2cbf894
