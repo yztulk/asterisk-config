@@ -4,6 +4,7 @@ var path = require('path');
 var fs = require("fs");
 
 app.use(express.static(path.join(__dirname, '/metronic')));
+//app.use(express.static(path.join(__dirname, '/asentus')));
 
 var port = 8080;
 
