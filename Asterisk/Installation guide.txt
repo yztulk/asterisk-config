@@ -55,9 +55,6 @@ make config
 service asterisk start
 asterisk -rvvvvv
 
-//Install mail server
-apt-get install sendmail
-
 //Install htop
 sudo apt-get install htop
 
