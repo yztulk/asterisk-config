@@ -70,3 +70,6 @@ sudo ./src/nethogs
 sudo make install
 hash -r
 sudo nethogs
+
+//Install mailx
+apt install mailutils
