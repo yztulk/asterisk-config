@@ -70,3 +70,8 @@ sudo nethogs
 
 //Install mailx
 apt install mailutils
+
+//Copy m2mob.sh, ma2mob.sh and mmp3.sh to /var/lib/asterisk/agi-bin/
+
+//Change ownership to user on which Asterisk runs
+chmod 755 /var/lib/asterisk/agi-bin/m2mob.sh
