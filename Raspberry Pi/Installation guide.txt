@@ -10,3 +10,5 @@ https://wiki.ubuntu.com/ARM/RaspberryPi
 
 # Connect RPI3 to the LAN and find local IP address (ping ubuntu in cmd)
 ssh ubuntu@192.168.1.12
+
+//standard password is ubuntu
