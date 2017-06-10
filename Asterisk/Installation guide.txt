@@ -44,7 +44,7 @@ cd asterisk
 //Get Asterisk from Google Drive: https://drive.google.com/open?id=0B0MIDyOqg3VONFpJT2VVdm5KSlk
 wget https://downloads.asterisk.org/pub/telephony/asterisk/asterisk-14-current.tar.gz
 tar -zxvf asterisk-14-current.tar.gz
-cd asterisk-14.4.0
+cd asterisk-14.4.1
 ./configure --with-pjproject-bundled
 make
 make install
