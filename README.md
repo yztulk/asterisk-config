@@ -2,9 +2,8 @@
 This repository contains configuration files and manuals on how to install Asterisk and OpenVPN.
 
 # Things left to do and sorted on priority basis
+- Install wireless on local asterisk server
 - Buy microSD card reader
-- Buy Yealink phone
-- Install Asterisk on a RPi 3
 - Asterisk to auto start after power loss
 - Build scenario #2
 - Install VNC so dad and I can share screens 
