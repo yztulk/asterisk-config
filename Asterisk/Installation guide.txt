@@ -3,6 +3,8 @@ sudo su
 sudo apt-get update && apt-get upgrade -y
 
 //Copy asterisk, dahdi, libpri and install_prereq to a folder. These files are stored on Google Drive.
+cd /home
+mkdir asterisk
 
 //run script install_prereq
 chmod 777 install_prereq
@@ -11,6 +13,7 @@ chmod 777 install_prereq
 
 //Install DAHDI
 //wget https://downloads.asterisk.org/pub/telephony/dahdi-linux-complete/dahdi-linux-complete-current.tar.gz
+cd /home/asterisk
 tar -zxvf dahdi-linux-complete-current.tar.gz
 cd dahdi-linux-complete-2.11.1+2.11.1
 make
@@ -19,6 +22,7 @@ make config
 
 //Install libpri
 //wget https://downloads.asterisk.org/pub/telephony/libpri/libpri-current.tar.gz
+cd /home/asterisk
 tar -zxvf libpri-current.tar.gz
 cd libpri-1.6.0
 make
@@ -26,6 +30,7 @@ make install
 
 //Install Asterisk
 //wget https://downloads.asterisk.org/pub/telephony/asterisk/asterisk-14-current.tar.gz
+cd /home/asterisk
 tar -zxvf asterisk-14-current.tar.gz
 cd asterisk-14.4.1
 ./configure --with-pjproject-bundled
