@@ -61,7 +61,7 @@ sudo apt-get install htop
 //Install mailx
 apt install mailutils
 
-//Copy m2mob.sh, ma2mob.sh and mmp3.sh to /var/lib/asterisk/agi-bin/
+//Copy m2mob.sh, ma2mob.sh and mmp3.sh to /var/lib/asterisk/agi-bin/. Files are uploaded to Google Drive.
 
 //Change ownership to user on which Asterisk runs
 chown sudo:sudo /var/lib/asterisk/agi-bin -R
