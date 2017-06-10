@@ -11,6 +11,7 @@ This repository contains configuration files and manuals on how to install Aster
 - Build Rofem website
 
 # Security (todo)
+- Restrict access to vpn clients so that they can't ping internal ip addresses
 - A VPN client you can ping internal IP addresses. Make this password protected.
 - Run Asterisk as a user, not as root
 - SSH not on port 22
