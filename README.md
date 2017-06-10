@@ -5,6 +5,7 @@ This repository contains configuration files and manuals on how to install Aster
 - Buy microSD card reader
 - Buy Yealink phone
 - Install Asterisk on a RPi 3
+- Asterisk to auto start after power loss
 - Build scenario #2
 - Install VNC so dad and I can share screens 
 - Get access to Asterisk by means of the public IP address even though the Asterisk server is registred as a VPN client
