@@ -1,18 +1,8 @@
-/**
-* This installation guide is specific to Ubuntu 16.04.2 LTS
-*/
-
 //Get ubuntu ready
 sudo su
 sudo apt-get update && apt-get upgrade -y
 
-//Make folders
-cd ..
-mkdir asterisk && cd asterisk
-mkdir dependencies
-mkdir dahdi
-mkdir libpri
-mkdir asterisk
+//Copy asterisk, dahdi and libpri to a folder. These files are stored on Google Drive
 
 //install install_prereq
 cd contrib/scripts
@@ -23,7 +13,7 @@ chmod 777 install_prereq
 //Install DAHDI
 cd dahdi
 //Get DAHDI from Google Drive: https://drive.google.com/open?id=0B0MIDyOqg3VONFpJT2VVdm5KSlk
-wget https://downloads.asterisk.org/pub/telephony/dahdi-linux-complete/dahdi-linux-complete-current.tar.gz
+//wget https://downloads.asterisk.org/pub/telephony/dahdi-linux-complete/dahdi-linux-complete-current.tar.gz
 tar -zxvf dahdi-linux-complete-current.tar.gz
 cd dahdi-linux-complete-2.11.1+2.11.1
 make
@@ -33,7 +23,7 @@ make config
 //Install libpri
 cd libpri
 //Get libpri from Google Drive: https://drive.google.com/open?id=0B0MIDyOqg3VONFpJT2VVdm5KSlk
-wget https://downloads.asterisk.org/pub/telephony/libpri/libpri-current.tar.gz
+//wget https://downloads.asterisk.org/pub/telephony/libpri/libpri-current.tar.gz
 tar -zxvf libpri-current.tar.gz
 cd libpri-1.6.0
 make
@@ -42,7 +32,7 @@ make install
 //Install Asterisk
 cd asterisk
 //Get Asterisk from Google Drive: https://drive.google.com/open?id=0B0MIDyOqg3VONFpJT2VVdm5KSlk
-wget https://downloads.asterisk.org/pub/telephony/asterisk/asterisk-14-current.tar.gz
+//wget https://downloads.asterisk.org/pub/telephony/asterisk/asterisk-14-current.tar.gz
 tar -zxvf asterisk-14-current.tar.gz
 cd asterisk-14.4.1
 ./configure --with-pjproject-bundled
@@ -61,7 +51,7 @@ sudo apt-get install htop
 //Install mailx
 apt install mailutils
 
-//Copy m2mob.sh, ma2mob.sh and mmp3.sh to /var/lib/asterisk/agi-bin/. Files are uploaded to Google Drive.
+//Copy m2mob.sh, ma2mob.sh and mmp3.sh to /var/lib/asterisk/agi-bin/. Files are stored in this repository.
 
 //Change ownership to user on which Asterisk runs
 chown sudo:sudo /var/lib/asterisk/agi-bin -R
