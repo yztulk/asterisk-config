@@ -45,6 +45,9 @@ make config
 service asterisk start
 asterisk -rvvvvv
 
+//Install openvpn
+sudo apt-get install openvpn
+
 //Install htop
 sudo apt-get install htop
 
