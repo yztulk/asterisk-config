@@ -54,6 +54,11 @@ sudo apt-get install htop
 //Install mailx
 apt install mailutils
 
+//Enable wireless network
+ifconfig wlan0 up
+sudo iwconfig wlan0 essid TPG-WZ4Q key s:yourpass
+sudo dhclient wlan0
+
 //Copy m2mob.sh, ma2mob.sh and mmp3.sh to /var/lib/asterisk/agi-bin/. Files are stored in this repository.
 
 //Change ownership to user on which Asterisk runs
