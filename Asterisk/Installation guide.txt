@@ -1,6 +1,6 @@
 //Download Ubuntu Classic Server 16.04 for Raspberry Pi at https://ubuntu-pi-flavour-maker.org/download/
 
-//Flash image on microSD card with Etcher (https://etcher.io/)
+//Flash image on microSD card with Win32DiskImager
 
 //Insert microSD in Raspberry Pi and boot device. Make sure the Raspberry Pi is connected to a monitor and a router with internet access.
 
