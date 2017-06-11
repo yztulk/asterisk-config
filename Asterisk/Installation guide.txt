@@ -23,6 +23,14 @@ sudo chown ubuntu:ubuntu /home/asterisk -R
 cd /home/asterisk
 chmod 777 install_prereq
 ./install_prereq install
+
+//reboot
+//reboot will fail due to an issue. Run the below commands
+apt remove --purge console-setup
+apt install console-setup
+dpkg-reconfigure console-setup
+
+//Continue installation
 ./install_prereq install-unpackaged
 
 //Install DAHDI
