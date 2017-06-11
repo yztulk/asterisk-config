@@ -61,10 +61,10 @@ asterisk -rvvvvv
 rm -r /home/asterisk
 
 //Install openvpn
-sudo apt-get install openvpn
+apt-get install openvpn
 
 //Install htop
-sudo apt-get install htop
+apt-get install htop
 
 //Install mailx
 apt install mailutils
