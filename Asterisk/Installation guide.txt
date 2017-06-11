@@ -11,7 +11,7 @@ ssh ubuntu@192.168.1.12
 
 //Get ubuntu ready
 sudo su
-apt-get update && apt-get upgrade -y
+apt-get update // && apt-get upgrade -y (upgrade results in a boot issue)
 
 cd /home
 mkdir asterisk
