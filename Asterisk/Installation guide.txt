@@ -57,6 +57,9 @@ make config
 service asterisk start
 asterisk -rvvvvv
 
+//Remove the installation files
+rm -r /home/asterisk
+
 //Install openvpn
 sudo apt-get install openvpn
 
@@ -76,6 +79,3 @@ sudo dhclient wlan0
 //Change ownership to user on which Asterisk runs
 chown sudo:sudo /var/lib/asterisk/agi-bin -R
 chmod 755 /var/lib/asterisk/agi-bin/m2mob.sh
-
-//Remove the installation files
-rm -r /home/asterisk
