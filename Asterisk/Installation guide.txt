@@ -13,12 +13,14 @@ ssh ubuntu@192.168.1.12
 sudo su
 apt-get update && apt-get upgrade -y
 
-//Copy asterisk, dahdi, libpri and install_prereq to a folder. These files are stored on Google Drive.
 cd /home
 mkdir asterisk
 sudo chown ubuntu:ubuntu /home/asterisk -R
 
+//Copy asterisk, dahdi, libpri and install_prereq to /home/asterisk. These files are stored on Google Drive.
+
 //run script install_prereq
+cd /home/asterisk
 chmod 777 install_prereq
 ./install_prereq install
 ./install_prereq install-unpackaged
