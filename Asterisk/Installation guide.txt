@@ -24,11 +24,13 @@ cd /home/asterisk
 chmod 777 install_prereq
 ./install_prereq install
 
-//reboot
-//reboot will fail due to an issue. Run the below commands
+//reboot raspberry pi.
+//reboot will fail due to a few issues. Run the below commands
 apt remove --purge console-setup
 apt install console-setup
 dpkg-reconfigure console-setup
+apt-get install --reinstall apparmor
+//reboot raspberry pi. No issues should be logged.
 
 //Continue installation
 ./install_prereq install-unpackaged
