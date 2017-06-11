@@ -1,3 +1,14 @@
+//Download Ubuntu Classic Server 16.04 for Raspberry Pi at https://ubuntu-pi-flavour-maker.org/download/
+
+//Flash image on microSD card with Etcher (https://etcher.io/)
+
+//Insert microSD in Raspberry Pi and boot device.
+
+//Standard username and password is ubuntu
+
+//ssh into Raspberry Pi
+ssh ubuntu@192.168.1.12
+
 //Get ubuntu ready
 sudo su
 sudo apt-get update && apt-get upgrade -y
