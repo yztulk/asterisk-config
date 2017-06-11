@@ -2,7 +2,7 @@
 
 //Flash image on microSD card with Etcher (https://etcher.io/)
 
-//Insert microSD in Raspberry Pi and boot device.
+//Insert microSD in Raspberry Pi and boot device. Make sure Raspberry Pi is connected to the router and has access to internet.
 
 //Standard username and password is ubuntu
 
