@@ -16,6 +16,7 @@ apt-get update && apt-get upgrade -y
 //Copy asterisk, dahdi, libpri and install_prereq to a folder. These files are stored on Google Drive.
 cd /home
 mkdir asterisk
+sudo chown ubuntu:ubuntu /home/asterisk -R
 
 //run script install_prereq
 chmod 777 install_prereq
