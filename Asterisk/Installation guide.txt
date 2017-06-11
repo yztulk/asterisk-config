@@ -11,7 +11,7 @@ ssh ubuntu@192.168.1.12
 
 //Get ubuntu ready
 sudo su
-sudo apt-get update && apt-get upgrade -y
+apt-get update && apt-get upgrade -y
 
 //Copy asterisk, dahdi, libpri and install_prereq to a folder. These files are stored on Google Drive.
 cd /home
