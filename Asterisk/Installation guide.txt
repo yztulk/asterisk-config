@@ -4,7 +4,7 @@
 
 //Insert microSD in Raspberry Pi and boot device. Make sure the Raspberry Pi is connected to a monitor and a router with internet access.
 
-//Standard username and password is ubuntu
+//Default username and password is ubuntu
 
 //ssh into Raspberry Pi
 ssh ubuntu@192.168.1.12
