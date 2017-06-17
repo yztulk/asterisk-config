@@ -1,2 +1,0 @@
-https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-3
-https://wiki.archlinux.org/index.php/asterisk
