@@ -7,6 +7,7 @@ This repository contains configuration files and manuals on how to install Aster
 - Via tethering /hotspot verbinding maken met internet. Automatisch connecten wanneer het internet uitvalt.
 - IAX (cloud asterisk server ontvangt ingepakte gesprekken van lokale asterisk server) zodat er minder internetverkeer nodig is.
 - Install VNC so dad and I can share screens 
+- Install wireless / ethernet monitoring tool to track upload and download bandwidth 
 - Build Rofem website
 
 # Security (todo)
