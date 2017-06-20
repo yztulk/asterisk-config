@@ -3,6 +3,7 @@ This repository contains configuration files and manuals on how to install Aster
 
 # Things left to do and sorted on priority basis
 - Auto start vpn connection after a restart
+- Via thetering/hotspot verbinding maken met internet. Automatisch connecten wanneer het internet uitvalt.
 - Install VNC so dad and I can share screens 
 - Get access to Asterisk by means of the public IP address even though the Asterisk server is registred as a VPN client
 - Build Rofem website
