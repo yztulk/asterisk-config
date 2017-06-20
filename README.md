@@ -2,11 +2,11 @@
 This repository contains configuration files and manuals on how to install Asterisk and OpenVPN.
 
 # Things left to do and sorted on priority basis
+- Get access to Asterisk by means of the public IP address even though the Asterisk server is registred as a VPN client
 - Auto start vpn connection after a restart
-- Via thetering/hotspot verbinding maken met internet. Automatisch connecten wanneer het internet uitvalt.
+- Via tethering /hotspot verbinding maken met internet. Automatisch connecten wanneer het internet uitvalt.
 - IAX (cloud asterisk server ontvangt ingepakte gesprekken van lokale asterisk server) zodat er minder internetverkeer nodig is.
 - Install VNC so dad and I can share screens 
-- Get access to Asterisk by means of the public IP address even though the Asterisk server is registred as a VPN client
 - Build Rofem website
 
 # Security (todo)
@@ -16,7 +16,7 @@ This repository contains configuration files and manuals on how to install Aster
 
 # Storingen
 - Geen internet
-  * Thetering/hotspot
+  * tethering /hotspot
   * Inkomende gesprekken via asterisk centrale op kantoor van pa
 - Kapotte Raspberry
   * Raspberry die identiek is aan productie asterisk
