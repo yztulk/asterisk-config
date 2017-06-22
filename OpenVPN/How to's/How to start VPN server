@@ -1,0 +1,5 @@
+//start server
+sudo systemctl start openvpn@server
+
+//verify is server started without issues
+sudo systemctl status openvpn@server
