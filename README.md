@@ -7,6 +7,7 @@ https://help.ubuntu.com/community/Dnsmasq
 https://wiki.debian.org/HowTo/dnsmasq
 https://wiki.archlinux.org/index.php/dnsmasq
 - Via tethering /hotspot verbinding maken met internet. Automatisch connecten wanneer het internet uitvalt.
+- Auto connect as vpn client when vpn server restarts
 - Restrict access to vpn clients so that they can't ping internal ip addresses. As a VPN client you can ping internal IP addresses.
 If you'd like to allow or deny access to specific resources for specific users you can use Firewall rules.
 If you have certificates then you have to put the certificate's CommonName (CN) into the "client specific override" config and then add a "static" IP address to this OpenVPN client. Every OpenVPN client gets a /30 subnet so you have to assign this client a /30 subnet. Then you cann make firewall rules based on this /30 subnet.
