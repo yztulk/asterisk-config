@@ -45,10 +45,10 @@ cd /etc/openvpn/easy-rsa
 ./build-ca
 ./build-key-server server //hit enter for all questions, including empty password
 cp /etc/openvpn/easy-rsa/keys/{server.crt,server.key,ca.crt} /etc/openvpn
-service openvpn start
+systemctl start openvpn@vpnname.service
 
-//Another way to start openvpn is through: 
+//Other ways to start openvpn is through: 
 // - openvpn /etc/openvpn/server.conf
-// - systemctl start openvpn@vpnname.service
+// - service openvpn start
 
 openvpn --genkey --secret /etc/openvpn/ta.key
