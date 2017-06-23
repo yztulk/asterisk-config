@@ -47,6 +47,8 @@ cd /etc/openvpn/easy-rsa
 cp /etc/openvpn/easy-rsa/keys/{server.crt,server.key,ca.crt} /etc/openvpn
 service openvpn start
 
-//Another way to start openvpn is through: openvpn /etc/openvpn/server.conf
+//Another way to start openvpn is through: 
+// - openvpn /etc/openvpn/server.conf
+// - systemctl start openvpn@vpnname.service
 
 openvpn --genkey --secret /etc/openvpn/ta.key
