@@ -2,7 +2,6 @@
 This repository contains configuration files and manuals on how to install Asterisk and OpenVPN.
 
 # Things left to do and sorted on priority basis
-- VPN server throws error on start up.
 - If Asterisk loses internet connectivity or DNS, it stops responding to all SIP devices and trunks, and all extensions lose connectivity. Install and configure a local DNS cache on the system that Asterisk runs on.
 https://help.ubuntu.com/community/Dnsmasq
 https://wiki.debian.org/HowTo/dnsmasq
