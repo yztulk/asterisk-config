@@ -39,17 +39,17 @@ asterisk -rvvvvv
 rm -r /home/asterisk
 
 //Install openvpn
-apt-get install openvpn
+apt-get install openvpn -y
 
 //Install htop
-apt-get install htop
+apt-get install htop -y
 
 //Install mailx
-apt install mailutils
+apt install mailutils -y
 
 //Install and configure dnsmasq for local DNS chaching (https://help.ubuntu.com/community/Dnsmasq)
-sudo apt-get install dnsmasq
-sudo apt-get install dnsutils
+sudo apt-get install dnsmasq -y
+sudo apt-get install dnsutils -y
 nano /etc/dnsmasq.conf
 Change #listen-address= to listen-address=127.0.0.1
 nano /etc/dhcp/dhclient.conf
