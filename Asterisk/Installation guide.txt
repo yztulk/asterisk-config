@@ -1,57 +1,24 @@
-//Download Ubuntu Classic Server 16.04 for Raspberry Pi at https://ubuntu-pi-flavour-maker.org/download/
 //See here for an overview of all RPi images: http://elinux.org/RPi_Distributions#Raspbian_Server_Edition
-
 //Flash image on microSD card with Win32DiskImager
-
 //Insert microSD in Raspberry Pi and boot device. Make sure the Raspberry Pi is connected to a monitor and a router with internet access.
-
 //Default username and password is ubuntu
 
 //ssh into Raspberry Pi
-ssh ubuntu@192.168.1.12
-
-//Get ubuntu ready
-sudo su
-apt-get update // && apt-get upgrade -y (upgrade results in a boot issue)
+ssh root@192.168.1.12
 
 cd /home
 mkdir asterisk
 sudo chown ubuntu:ubuntu /home/asterisk -R
 
-//Copy asterisk, dahdi, libpri and install_prereq to /home/asterisk. These files are stored on Google Drive.
+//Copy asterisk and install_prereq to /home/asterisk. These files are stored on Google Drive.
 
 //run script install_prereq
 cd /home/asterisk
 chmod 777 install_prereq
 ./install_prereq install
 
-//reboot raspberry pi.
-//reboot will fail due to a few issues. Run the below commands
-apt remove --purge console-setup
-apt install console-setup
-dpkg-reconfigure console-setup
-apt-get install --reinstall apparmor
-//reboot raspberry pi. No issues should be logged.
-
 //Continue installation
 ./install_prereq install-unpackaged
-
-//Install DAHDI
-//wget https://downloads.asterisk.org/pub/telephony/dahdi-linux-complete/dahdi-linux-complete-current.tar.gz
-cd /home/asterisk
-tar -zxvf dahdi-linux-complete-current.tar.gz
-cd dahdi-linux-complete-2.11.1+2.11.1
-make
-make install
-make config
-
-//Install libpri
-//wget https://downloads.asterisk.org/pub/telephony/libpri/libpri-current.tar.gz
-cd /home/asterisk
-tar -zxvf libpri-current.tar.gz
-cd libpri-1.6.0
-make
-make install
 
 //Install Asterisk
 //wget https://downloads.asterisk.org/pub/telephony/asterisk/asterisk-14-current.tar.gz
@@ -80,13 +47,26 @@ apt-get install htop
 //Install mailx
 apt install mailutils
 
+//Install and configure dnsmasq for local DNS chaching (https://help.ubuntu.com/community/Dnsmasq)
+sudo apt-get install dnsmasq
+sudo apt-get install dnsutils
+nano /etc/dnsmasq.conf
+Change #listen-address= to listen-address=127.0.0.1
+nano /etc/dhcp/dhclient.conf
+
+Make sure config looks like this
+#supersede domain-name "fugue.com home.vix.com";
+prepend domain-name-servers 127.0.0.1;
+request subnet-mask, broadcast-address, time-offset, routers,
+domain-name, domain-name-servers, host-name,
+netbios-name-servers, netbios-scope;
+
+sudo /etc/init.d/dnsmasq restart
+dig ubuntu.com //Query time: 117 msec
+dig ubuntu.com //Query time: 1 msec
+
+
 //Enable wireless network
 ifconfig wlan0 up
 sudo iwconfig wlan0 essid TPG-WZ4Q key s:yourpass
 sudo dhclient wlan0
-
-//Copy m2mob.sh, ma2mob.sh and mmp3.sh to /var/lib/asterisk/agi-bin/. Files are stored in this repository.
-
-//Change ownership to user on which Asterisk runs
-chown sudo:sudo /var/lib/asterisk/agi-bin -R
-chmod 755 /var/lib/asterisk/agi-bin/m2mob.sh
