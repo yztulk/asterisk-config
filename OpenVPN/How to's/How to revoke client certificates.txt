@@ -2,5 +2,5 @@ cd /etc/openvpn/easy-rsa
 . ./vars
 ./revoke-full CertificateName
 mv /etc/openvpn/easy-rsa/keys/crl.pem /etc/openvpn/
-/etc/init.d/openvpn stop
-/etc/init.d/openvpn start
+systemctl stop openvpn@vpnname.service
+systemctl start openvpn@vpnname.service
