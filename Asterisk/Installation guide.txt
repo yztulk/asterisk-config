@@ -1,7 +1,5 @@
-//See here for an overview of all RPi images: http://elinux.org/RPi_Distributions#Raspbian_Server_Edition
+//See here for an overview of all RPi images: http://elinux.org/RPi_Distributions
 //Flash image on microSD card with Win32DiskImager
-//Insert microSD in Raspberry Pi and boot device. Make sure the Raspberry Pi is connected to a monitor and a router with internet access.
-//Default username and password is ubuntu
 
 //ssh into Raspberry Pi
 ssh root@192.168.1.12
