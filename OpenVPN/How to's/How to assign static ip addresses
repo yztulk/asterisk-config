@@ -1,0 +1,12 @@
+mkdir /etc/openvpn/staticclients
+nano /etc/openvpn/vpnname.conf
+
+//Add this line
+client-config-dir /etc/openvpn/staticclients
+
+Now place special configuration files in the staticclients subdirectory to define the fixed IP address for each VPN client. The clientName is the name of the certificate.
+touch [clientName]
+nano [clientName]
+
+//Add this line and save file
+ifconfig-push 10.8.0.22 10.8.0.21
