@@ -19,3 +19,6 @@ route 10.8.1.0 255.255.255.0 # routes for system admin
 cd /etc/openvpn/staticclients
 //Open config file e.g. nano client1 and add this line
 ifconfig-push 10.8.1.1 10.8.1.2
+
+//restart vpn server for changes to take effect
+sudo systemctl start openvpn@vpnname.service
