@@ -10,3 +10,12 @@ nano [clientName]
 
 //Add this line and save file
 ifconfig-push 10.8.0.22 10.8.0.21
+
+//Create seperate LAN network
+nano /etc/openvpn/vpnname.conf
+
+//Add this line
+route 10.8.1.0 255.255.255.0 # routes for system admin
+cd /etc/openvpn/staticclients
+//Open config file e.g. nano client1 and add this line
+ifconfig-push 10.8.1.1 10.8.1.2
