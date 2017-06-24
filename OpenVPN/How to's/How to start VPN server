@@ -1,5 +1,6 @@
 //start server
 sudo systemctl start openvpn@server
+sudo systemctl start openvpn@vpnname.service
 
 //verify is server started without issues
 sudo systemctl status openvpn@server
