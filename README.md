@@ -2,10 +2,6 @@
 This repository contains configuration files and manuals on how to install Asterisk and OpenVPN.
 
 # Things left to do and sorted on priority basis
-- If Asterisk loses internet connectivity or DNS, it stops responding to all SIP devices and trunks, and all extensions lose connectivity. Install and configure a local DNS cache on the system that Asterisk runs on.
-https://help.ubuntu.com/community/Dnsmasq
-https://wiki.debian.org/HowTo/dnsmasq
-https://wiki.archlinux.org/index.php/dnsmasq
 - Via tethering /hotspot verbinding maken met internet. Automatisch connecten wanneer het internet uitvalt.
 - Auto connect as vpn client when vpn server restarts
 - Restrict access to vpn clients so that they can't ping internal ip addresses. As a VPN client you can ping internal IP addresses.
