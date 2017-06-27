@@ -10,7 +10,7 @@ If you have certificates then you have to put the certificate's CommonName (CN) 
 - IAX (cloud asterisk server ontvangt ingepakte gesprekken van lokale asterisk server) zodat er minder internetverkeer nodig is.
 - Install VNC so dad and I can share screens 
 - Install wireless / ethernet monitoring tool to track upload and download bandwidth 
-- Install dnsmasq on asterisk image
+- Install dnsmasq and Midnight Commander on asterisk image
 - Build Rofem website
 
 # Security (todo)
