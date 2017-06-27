@@ -2,7 +2,7 @@
 This repository contains configuration files and manuals on how to install Asterisk and OpenVPN.
 
 # Things left to do and sorted on priority basis
-- Via tethering /hotspot verbinding maken met internet. Automatisch connecten wanneer het internet uitvalt.
+- Via tethering /hotspot verbinding maken met internet. Automatisch connecten wanneer het internet uitvalt. Probleem is dat hotspot de asterisk server een andere IP adres opgeeft en daardoor kunnen de SIP phones niet meer verbinding maken met Asterisk server. 
 - Auto connect as vpn client when vpn server restarts
 - Restrict access to vpn clients so that they can't ping internal ip addresses. As a VPN client you can ping internal IP addresses.
 If you'd like to allow or deny access to specific resources for specific users you can use Firewall rules.
