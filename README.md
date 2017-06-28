@@ -12,6 +12,7 @@ If you have certificates then you have to put the certificate's CommonName (CN) 
 - Install wireless / ethernet monitoring tool to track upload and download bandwidth 
 - Install dnsmasq and Midnight Commander on asterisk image
 - Build Rofem website
+- Install new VPN server and do certificate exchange through secure connection
 
 # Security (todo)
 - Run Asterisk as a user, not as root
