@@ -64,6 +64,4 @@ dig ubuntu.com //Query time: 117 msec
 dig ubuntu.com //Query time: 1 msec
 
 //Enable wireless network
-ifconfig wlan0 up
-sudo iwconfig wlan0 essid TPG-WZ4Q key s:yourpass
-sudo dhclient wlan0
+dietpi-config
