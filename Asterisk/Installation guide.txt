@@ -67,3 +67,7 @@ dig ubuntu.com //Query time: 1 msec
 dietpi-config
 7 Network Options: Adapters
 Wifi Change Wireless Network Settings
+
+//Upload email bestanden van pa
+
+//Upload beltonen
