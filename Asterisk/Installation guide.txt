@@ -42,6 +42,9 @@ apt-get install openvpn -y
 //Install htop
 apt-get install htop -y
 
+//Install Midnight Commander
+apt-get install install mc -y
+
 //Install mailx
 apt install mailutils -y
 
