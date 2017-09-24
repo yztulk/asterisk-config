@@ -34,9 +34,6 @@ make config
 service asterisk start
 asterisk -rvvvvv
 
-//Remove the installation files
-rm -r /home/asterisk
-
 //Install openvpn
 apt-get install openvpn -y
 
@@ -75,3 +72,6 @@ Wifi Change Wireless Network Settings
 //Upload email bestanden van pa
 
 //Upload beltonen
+
+//Remove the installation files
+rm -r /home/asterisk
