@@ -1,4 +1,5 @@
 //See here for an overview of all RPi images: http://elinux.org/RPi_Distributions
+//http://dietpi.com/
 //Flash image on microSD card with Win32DiskImager
 
 //ssh into Raspberry Pi
