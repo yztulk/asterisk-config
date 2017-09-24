@@ -4,9 +4,7 @@ This repository contains configuration files and manuals on how to install Aster
 # Things left to do and sorted on priority basis
 - Install new VPN server and do certificate exchange through secure connection
 - Install on Asterisk image:
-1) dnsmasq
-2) Midnight Commander
-3) wireless / ethernet monitoring tool to track upload and download bandwidth 
+1) wireless / ethernet monitoring tool to track upload and download bandwidth 
 - Auto connect as vpn client when vpn server restarts
 - Restrict access to vpn clients so that they can't ping internal ip addresses. As a VPN client you can ping internal IP addresses.
 If you'd like to allow or deny access to specific resources for specific users you can use Firewall rules.
