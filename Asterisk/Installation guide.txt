@@ -46,8 +46,8 @@ apt-get install mc -y
 //Install mailx
 apt install mailutils -y
 
-//Or install sendmail
-sudo apt-get install sendmail
+//Or install sendemail
+sudo apt-get install sendemail
 
 //Install and configure dnsmasq for local DNS chaching (https://help.ubuntu.com/community/Dnsmasq)
 sudo apt-get install dnsmasq -y
