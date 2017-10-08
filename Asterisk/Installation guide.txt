@@ -49,6 +49,17 @@ apt install mailutils -y
 //Install postfix
 apt-get install postfix -y
 
+//Change email's sender address
+nano /etc/postfix/main.cf
+//Add this to main.cf: smtp_generic_maps = hash:/etc/postfix/generic
+//Save and close main.cf
+
+nano /etc/postfix/generic
+//Add this to generic: root@dietpi info@rofem.nl
+//Save and close generic
+postmap /etc/postfix/generic
+postfix reload
+
 //Or install sendemail
 sudo apt-get install sendemail
 
