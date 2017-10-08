@@ -60,6 +60,15 @@ nano /etc/postfix/generic
 postmap /etc/postfix/generic
 postfix reload
 
+//change name sender address
+nano /etc/passwd
+//Add these lines add the bottom
+root:x:0:0:Rofem:/root:/bin/bash
+www-data:x:33:33:Rofem:/var/www:/usr/bin/nologin
+//Comment out these lines
+#root:x:0:0:root:/root:/bin/bash
+#www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+
 //Or install sendemail
 sudo apt-get install sendemail
 
