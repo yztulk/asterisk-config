@@ -21,6 +21,7 @@ chmod 777 install_prereq
 
 //Install Asterisk
 //wget https://downloads.asterisk.org/pub/telephony/asterisk/asterisk-14-current.tar.gz
+//wget https://downloads.asterisk.org/pub/telephony/asterisk/old-releases/asterisk-11.25.3.tar.gz
 cd /home/asterisk
 tar -zxvf asterisk-14-current.tar.gz
 cd asterisk-14.4.1
