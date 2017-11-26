@@ -104,7 +104,7 @@ scp ~/Documents/Asterisk/email\ files/mmp3.sh root@192.168.1.2:/var/lib/asterisk
 //assign all rights to root user
 chmod -R 777 /var/lib/asterisk/agi-bin/
 
-//Send out a test email
+//Send out a test email (the email might end up in the spam folder)
 echo "text body" | mailx -s "subject text" roybout@gmail.com
 
 //Upload beltonen
