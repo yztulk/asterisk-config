@@ -101,6 +101,9 @@ scp ~/Documents/Asterisk/email\ files/m2mob.sh root@192.168.1.2:/var/lib/asteris
 scp ~/Documents/Asterisk/email\ files/ma2mob.sh root@192.168.1.2:/var/lib/asterisk/agi-bin/
 scp ~/Documents/Asterisk/email\ files/mmp3.sh root@192.168.1.2:/var/lib/asterisk/agi-bin/
 
+//assign all rights to root user
+chmod -R 777 /var/lib/asterisk/agi-bin/
+
 //Upload beltonen
 
 //Remove the installation files
