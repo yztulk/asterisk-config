@@ -96,10 +96,10 @@ dietpi-config
 7 Network Options: Adapters
 Wifi Change Wireless Network Settings
 
-//Upload email bestanden van pa naar /var/lib/asterisk/agi-bin/
-m2mob.sh
-ma2mob.sh
-mmp3.sh
+//Upload email bestanden
+scp ~/Documents/Asterisk/email\ files/m2mob.sh root@192.168.1.2:/var/lib/asterisk/agi-bin/
+scp ~/Documents/Asterisk/email\ files/ma2mob.sh root@192.168.1.2:/var/lib/asterisk/agi-bin/
+scp ~/Documents/Asterisk/email\ files/mmp3.sh root@192.168.1.2:/var/lib/asterisk/agi-bin/
 
 //Upload beltonen
 
