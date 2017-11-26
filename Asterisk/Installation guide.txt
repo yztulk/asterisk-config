@@ -107,6 +107,9 @@ chmod -R 777 /var/lib/asterisk/agi-bin/
 //Send out a test email (the email might end up in the spam folder)
 echo "text body" | mailx -s "subject text" roybout@gmail.com
 
+//upload www folder
+
+
 //Upload beltonen
 
 //Remove the installation files
