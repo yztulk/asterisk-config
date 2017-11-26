@@ -96,7 +96,10 @@ dietpi-config
 7 Network Options: Adapters
 Wifi Change Wireless Network Settings
 
-//Upload email bestanden van pa
+//Upload email bestanden van pa naar /var/lib/asterisk/agi-bin/
+m2mob.sh
+ma2mob.sh
+mmp3.sh
 
 //Upload beltonen
 
