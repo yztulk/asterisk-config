@@ -111,7 +111,8 @@ echo "text body" | mailx -s "subject text" roybout@gmail.com
 scp -r ~/Downloads/www root@192.168.1.2:/var
 chmod -R 777 /var/www
 
-//Upload beltonen
+//Install web server
+sudo apt-get install lighttpd
 
 //Remove the installation files
 rm -r /home/asterisk
