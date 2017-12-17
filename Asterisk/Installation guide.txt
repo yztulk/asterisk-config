@@ -114,7 +114,7 @@ chmod -R 777 /var/www
 //Install web server
 sudo apt-get install lighttpd
 
-//Restart Asterisk nadat een vpn is opgestart
+//Restart Asterisk nadat openvpn een verbinding tot stand heeft gebracht
 //Voeg deze twee regels toe aan openvpn client config bestand
 script-security 2
 up /etc/openvpn/up.sh
