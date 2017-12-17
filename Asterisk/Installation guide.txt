@@ -114,5 +114,16 @@ chmod -R 777 /var/www
 //Install web server
 sudo apt-get install lighttpd
 
+//Restart Asterisk nadat een vpn is opgestart
+//Voeg deze twee regels toe aan openvpn client config bestand
+script-security 2
+up /etc/openvpn/up.sh
+nano /etc/openvpn/up.sh
+//kopieer onderstaande
+#!/bin/bash
+asterisk -rx "core restart now"
+//sla bestand op
+chmod +x /etc/openvpn/up.sh
+
 //Remove the installation files
 rm -r /home/asterisk
