@@ -96,6 +96,10 @@ dietpi-config
 7 Network Options: Adapters
 Wifi Change Wireless Network Settings
 
+//To coneect to a wireless network through the command line do this
+iwconfig wlan0 essid name key
+//Replace name with the actual network name, and replace password with the actual security key for the network
+
 //Upload email bestanden
 scp ~/Documents/Asterisk/email\ files/m2mob.sh root@192.168.1.2:/var/lib/asterisk/agi-bin/
 scp ~/Documents/Asterisk/email\ files/ma2mob.sh root@192.168.1.2:/var/lib/asterisk/agi-bin/
