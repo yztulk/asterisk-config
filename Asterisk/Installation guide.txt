@@ -96,6 +96,9 @@ dietpi-config
 7 Network Options: Adapters
 Wifi Change Wireless Network Settings
 
+//Turn on wireless card
+ifconfig wlan0
+
 //To coneect to a wireless network through the command line do this
 iwconfig wlan0 essid name key
 //Replace name with the actual network name, and replace password with the actual security key for the network
