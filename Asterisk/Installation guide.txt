@@ -70,6 +70,34 @@ www-data:x:33:33:Rofem:/var/www:/usr/bin/nologin
 #root:x:0:0:root:/root:/bin/bash
 #www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
 
+mkdir ~/.certs
+apt-get install libnss3-tools
+certutil -N -d ~/.certs
+echo -n | openssl s_client -connect smtp.gmail.com:465 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > ~/.certs/gmail.crt
+certutil -A -n "Google Internet Authority" -t "C,," -d ~/.certs -i ~/.certs/gmail.crt
+
+nano ~/.mailrc
+#Add the below lines
+# account gmail {
+# set smtp-use-starttls
+# set ssl-verify=ignore
+# set smtp-auth=login
+# set smtp=smtp://smtp.gmail.com:587
+# set from="youremailhere@gmail.com(Rofem)"
+# set smtp-auth-user=youremail@gmail.com
+# set smtp-auth-password=yourpasswordhere
+# set ssl-verify=ignore
+# set nss-config-dir=~/.certs/gmail.crt
+# }
+
+# https://myaccount.google.com/lesssecureapps
+# Switch 'Allow less secure apps' to ON
+
+# Possibly an installation of heirloom-mailx is required: sudo apt-get install heirloom-mailx
+
+# Send test email
+echo -e "testing email" | mailx -A gmail -s "Test" youremailaddress@gmail.com
+
 //Or install sendemail
 sudo apt-get install sendemail
 
