@@ -72,6 +72,7 @@ www-data:x:33:33:Rofem:/var/www:/usr/bin/nologin
 
 mkdir ~/.certs
 apt-get install libnss3-tools
+sudo apt-get install heirloom-mailx
 certutil -N -d ~/.certs
 echo -n | openssl s_client -connect smtp.gmail.com:465 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > ~/.certs/gmail.crt
 certutil -A -n "Google Internet Authority" -t "C,," -d ~/.certs -i ~/.certs/gmail.crt
@@ -92,8 +93,6 @@ nano ~/.mailrc
 
 # https://myaccount.google.com/lesssecureapps
 # Switch 'Allow less secure apps' to ON
-
-# Possibly an installation of heirloom-mailx is required: sudo apt-get install heirloom-mailx
 
 # Send test email
 echo -e "testing email" | mailx -A gmail -s "Test" youremailaddress@gmail.com
