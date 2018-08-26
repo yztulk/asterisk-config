@@ -16,7 +16,7 @@ cd /home/asterisk
 chmod 777 install_prereq
 ./install_prereq install
 
-//Continue installation
+//Continue installatio
 ./install_prereq install-unpackaged
 
 //Install Asterisk
@@ -53,6 +53,7 @@ apt-get install postfix -y
 //Change email's sender address
 nano /etc/postfix/main.cf
 //Add this to main.cf: smtp_generic_maps = hash:/etc/postfix/generic
+//Change this line smtpd_use_tls=yes to smtpd_use_tls=no
 //Save and close main.cf
 
 nano /etc/postfix/generic
