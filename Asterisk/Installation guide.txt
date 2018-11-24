@@ -103,6 +103,10 @@ sudo apt-get install sendemail
 
 //Install Mutt, this is the only email client that sends out an email from the AGI script in the dial plan
 sudo apt-get install mutt
+mkdir -p ~/.mutt/cache/headers
+mkdir -p ~/.mutt/cache/bodies
+touch ~/.mutt/certificates
+
 #Add the below lines to ~/.mutt/muttrc
 # set ssl_starttls=yes
 # set ssl_force_tls=yes
@@ -121,6 +125,9 @@ sudo apt-get install mutt
 # set smtp_pass="passwordOfSenderEmailAddress"
 # set move = no
 # set imap_keepalive = 900
+
+# Send test email
+echo "body text" | mutt -s "Sent from asterisk AGI script" RecipientAddress@gmail.com
 
 //Install and configure dnsmasq for local DNS chaching (https://help.ubuntu.com/community/Dnsmasq)
 sudo apt-get install dnsmasq -y
