@@ -101,6 +101,27 @@ echo -e "testing email" | mailx -A gmail -s "Test" youremailaddress@gmail.com
 //Or install sendemail
 sudo apt-get install sendemail
 
+//Install Mutt, this is the only email client that sends out an email from the AGI script in the dial plan
+sudo apt-get install mutt
+#Add the below lines to ~/.mutt/muttrc
+# set ssl_starttls=yes
+# set ssl_force_tls=yes
+# set imap_user = 'SenderEmailAddres'
+# set imap_pass = 'passwordOfSenderEmailAddress'
+# set from='SenderEmailAddres'
+# set use_from=yes
+# set realname='Test'
+# set folder = imaps://imap.gmail.com/
+# set spoolfile = imaps://imap.gmail.com/INBOX
+# set postponed="imaps://imap.gmail.com/[Gmail]/Drafts"
+# set header_cache = "~/.mutt/cache/headers"
+# set message_cachedir = "~/.mutt/cache/bodies"
+# set certificate_file = "~/.mutt/certificates"
+# set smtp_url="smtp://SenderEmailAddres@smtp.gmail.com:587/"
+# set smtp_pass="passwordOfSenderEmailAddress"
+# set move = no
+# set imap_keepalive = 900
+
 //Install and configure dnsmasq for local DNS chaching (https://help.ubuntu.com/community/Dnsmasq)
 sudo apt-get install dnsmasq -y
 sudo apt-get install dnsutils -y
